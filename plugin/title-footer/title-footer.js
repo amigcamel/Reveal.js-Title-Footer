@@ -63,7 +63,7 @@ title_footer.getElementsByTagNames=function(list,obj)
 
 /* Method to initialize the Title-Footer footer */
 
-title_footer.initialize=function(title,background)
+title_footer.initialize=function(title,background,href)
 {
 
 	// Link to the Title-Footer CSS
@@ -108,7 +108,7 @@ title_footer.initialize=function(title,background)
 	var title_footer_p=document.createElement('p');
 	title_footer.appendChild(title_footer_p);
 	var a_element=document.createElement('a');
-	a_element.setAttribute('href','#/0');
+	a_element.setAttribute('href', href || '#/0');
 	a_element.appendChild(document.createTextNode(this.title));
 	title_footer_p.appendChild(a_element);
 	var div_class_reveal=document.querySelectorAll('.reveal')[0];
